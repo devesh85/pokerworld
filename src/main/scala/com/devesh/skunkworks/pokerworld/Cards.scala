@@ -40,4 +40,19 @@ object Cards {
   object Two extends Rank
 
   type Card = (Suit, Rank)
+
+  private val order = List(Ace, King, Queen, Jack, Ten, Nine, Eight, Seven, Six, Five, Four, Three, Two)
+
+  def isGreaterInRank(firstCard: Card, secondCard:Card):Boolean = {
+    val (rankFirst, _ ) = firstCard
+    val (rankSecond, _ ) = secondCard
+    order.indexOf(rankFirst) < order.indexOf(rankSecond)
+  }
+  def isSameInRank(firstCard: Card, secondCard:Card):Boolean = {
+    val (rankFirst, _ ) = firstCard
+    val (rankSecond, _ ) = secondCard
+    order.indexOf(rankFirst) == order.indexOf(rankSecond)
+  }
+
+
 }
