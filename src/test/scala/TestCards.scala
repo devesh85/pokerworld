@@ -1,4 +1,4 @@
-import Cards._
+import com.devesh.skunkworks.pokerworld._
 import org.junit.runner.RunWith
 import org.scalatest.junit.JUnitRunner
 import org.scalatest.{FlatSpec, Matchers}
@@ -15,7 +15,7 @@ class TestCards  extends FlatSpec with Matchers{
   "comparing two cards of diff rank" should "result" in {
     val c1 = (Heart, Six)
     val c2 = (Clubs, Seven)
-    isGreaterInRank(c1, c2) should be (false)
+    Cards.isGreaterInRank(c1, c2) should be (false)
   }
 
 }
